@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white2"
+    tools:context=".activity.DetailAccountActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbardetailaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:titleTextColor="@color/white"
+        app:title="Thông tin người dùng" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:padding="20dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avataruser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_avatardefault"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Tên người dùng"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_usernumberphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="Số điện thoại"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_username"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+            <ImageButton
+                android:id="@+id/btn_updateinforuer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@null"
+                android:src="@drawable/ic_pen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_ordering"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Đơn đang thuê"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_bed"
+            android:drawablePadding="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_historyorder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lịch sử thuê xe"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_history"
+            android:drawablePadding="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_signout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Đăng xuất"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/ic_signout"
+            android:drawablePadding="10dp"/>
+    </LinearLayout>
+</LinearLayout>

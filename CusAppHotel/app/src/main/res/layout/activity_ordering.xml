@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white2"
+    tools:context=".activity.OrderingActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarordering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:titleTextColor="@color/white"
+        app:title="Điền thông tin" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                app:cardCornerRadius="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_nameroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:padding="20dp"
+                        android:singleLine="true"
+                        android:drawablePadding="10dp"
+                        android:background="@drawable/border_bottom"
+                        android:text="Tên phòng"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_bottom">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="Nhận phòng"
+                                android:textSize="20sp"/>
+                            <TextView
+                                android:id="@+id/tv_rentdate"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="09-07-2023"
+                                android:textSize="20sp"/>
+                            <ImageButton
+                                android:id="@+id/btn_rentdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_calenda"
+                                android:background="@null"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="Trả phòng"
+                                android:textSize="20sp"/>
+                            <TextView
+                                android:id="@+id/tv_returndate"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:text="09-07-2023"
+                                android:textSize="20sp"/>
+                            <ImageButton
+                                android:id="@+id/btn_returndate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_calendar_return"
+                                android:background="@null"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_typeroom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loại phòng: Phòng Đơn"
+                            android:textSize="15sp"
+                            android:textColor="#6b6b6b"/>
+                        <TextView
+                            android:id="@+id/tv_priceroom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="100.000 VNĐ / Ngày"
+                            android:textSize="15sp"
+                            android:textColor="#6b6b6b"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tổng tiền: "
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/tv_totalprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="999.999 VNĐ"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thông tin liên lạc"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:textSize="20dp"
+                        android:textColor="@color/grey2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Họ Tên:" />
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Tên người dùng"
+                        android:textSize="20sp"
+                        android:singleLine="true"
+                        android:minHeight="48dp"
+                        android:padding="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:textSize="20dp"
+                        android:textColor="@color/grey2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="Số điện thoại:"/>
+
+                    <TextView
+                        android:id="@+id/tv_numberphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="0123456789"
+                        android:textSize="20sp"
+                        android:singleLine="true"
+                        android:minHeight="48dp"
+                        android:padding="10dp"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:text="Chọn phương thức thanh toán:" />
+
+                <RadioGroup
+                    android:id="@+id/rg_ppthanhtoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_cod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh toán Tiền mặt" />
+
+                    <RadioButton
+                        android:id="@+id/rb_momo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh toán MoMo" />
+
+                    <RadioButton
+                        android:id="@+id/rb_atm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh toán ATM" />
+                </RadioGroup>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_comfirm"
+                    android:layout_width="200dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/border_radius_login"
+                    android:fontFamily="@font/arimo_bold"
+                    android:layout_gravity="center"
+                    android:padding="13dp"
+                    android:text="Xác nhận"
+                    android:textColor="@color/white"
+                    android:maxLength="10"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
